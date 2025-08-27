@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using Sys = Cosmos.System;
+using Cosmos.HAL;
 
 
 namespace SierraOS
@@ -41,8 +42,7 @@ namespace SierraOS
             string response;
             string input = Console.ReadLine();
             response = this._commandManager.processInput(input);
-            Console.WriteLine(response);
-            
+            Console.WriteLine(response);                   
         }
 
     }

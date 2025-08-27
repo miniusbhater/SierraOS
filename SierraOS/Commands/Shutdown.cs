@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SierraOS.Commands
@@ -19,6 +20,9 @@ namespace SierraOS.Commands
 
         public void doShutdown()
         {
+            Console.Clear();
+            Console.WriteLine("Shutting down");
+            Thread.Sleep(200);
             Cosmos.System.Power.Shutdown();
         }
     }
