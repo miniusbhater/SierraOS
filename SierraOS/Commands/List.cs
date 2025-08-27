@@ -19,8 +19,10 @@ namespace SierraOS.Commands
         }
 
         public void ls()
-        {                  
-                string [] files = Directory.GetFiles(@"0:\");
+        {
+            try
+            {
+                string[] files = Directory.GetFiles(@"0:\");
                 foreach (var file in files)
                 {
                     Console.WriteLine(file);
@@ -30,7 +32,14 @@ namespace SierraOS.Commands
                 foreach (var dir in dirs)
                 {
                     Console.WriteLine("(DIRECTORY) " + dir);
-                }                   
-        }
+                }
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+            }
+            
     }
 }
