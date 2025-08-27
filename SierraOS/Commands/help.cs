@@ -21,6 +21,7 @@ namespace SierraOS.Commands
             Console.Write("\nhelp          Lists Commands");
             Console.Write("\nver           Displays the SierraOS version");
             Console.Write("\nclear         Clears the screen");
+            Console.Write("\nvfs           Sets up the Virtual File System");
             Console.Write("\necho          Echos something the user types");
             Console.Write("\ntime          Displays the current system time");
             Console.Write("\ndate          Displays the current system date");

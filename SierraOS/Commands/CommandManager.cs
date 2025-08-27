@@ -25,6 +25,7 @@ namespace SierraOS.Commands
             this.commands.Add(new Commands.Date("date"));
             this.commands.Add(new Commands.Diagnostics("diagnostics"));
             this.commands.Add(new Commands.Beep("beep"));
+            this.commands.Add(new Commands.SetupVFS("VFS"));
         }
 
         public string processInput(string input)
