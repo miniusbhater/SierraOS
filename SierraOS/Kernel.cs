@@ -1,10 +1,12 @@
-﻿using Cosmos.Core.Memory;
+﻿using Cosmos.Core;
+using Cosmos.Core.Memory;
 using SierraOS.Commands;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using Sys = Cosmos.System;
+
 
 namespace SierraOS
 {
@@ -13,7 +15,14 @@ namespace SierraOS
         private CommandManager _commandManager;
         protected override void BeforeRun()
         {
-            this._commandManager = new CommandManager();
+            string availram;
+            string usedram;
+            availram = GCImplementation.GetAvailableRAM().ToString();
+            usedram = GCImplementation.GetUsedRAM().ToString();
+            Console.WriteLine($"{availram} system RAM free");
+            Console.WriteLine($"{usedram} system ram used");
+            this._commandManager = new CommandManager();          
+            Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("Welcome to SierraOS");
             Console.ForegroundColor = ConsoleColor.White;
@@ -23,7 +32,7 @@ namespace SierraOS
             Console.Beep();
             Thread.Sleep(1500);            
             Console.Clear();
-
+            
         }
 
         protected override void Run()

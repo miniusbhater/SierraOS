@@ -20,6 +20,7 @@ namespace SierraOS.Commands
             this.commands.Add(new Commands.Reboot("reboot"));
             this.commands.Add(new Commands.Ver("ver"));
             this.commands.Add(new Commands.Clear("clear"));
+            this.commands.Add(new Commands.Echo("echo"));
         }
 
         public string processInput(string input)

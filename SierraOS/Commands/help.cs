@@ -21,6 +21,7 @@ namespace SierraOS.Commands
             Console.Write("\nhelp       Lists Commands");
             Console.Write("\nver        Displays the SierraOS version");
             Console.Write("\nclear      Clears the screen");
+            Console.Write("\necho       Echos something the user types");
             Console.Write("\nshutdown   Shuts down SierraOS");
             Console.Write("\nreboot     Reboots SierraOS");
             Console.WriteLine();
