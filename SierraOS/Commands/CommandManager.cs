@@ -21,6 +21,8 @@ namespace SierraOS.Commands
             this.commands.Add(new Commands.Ver("ver"));
             this.commands.Add(new Commands.Clear("clear"));
             this.commands.Add(new Commands.Echo("echo"));
+            this.commands.Add(new Commands.Time("time"));
+            this.commands.Add(new Commands.Date("date"));
         }
 
         public string processInput(string input)
