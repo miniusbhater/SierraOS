@@ -16,7 +16,9 @@ namespace SierraOS.Commands
             this.commands = new List<Command>(1);
             this.commands.Add(new Commands.Help("help"));
             this.commands.Add(new Commands.Return(""));
-           
+            this.commands.Add(new Commands.Shutdown("shutdown"));
+            this.commands.Add(new Commands.Reboot("reboot"));
+            this.commands.Add(new Commands.Ver("ver"));
         }
 
         public string processInput(string input)
