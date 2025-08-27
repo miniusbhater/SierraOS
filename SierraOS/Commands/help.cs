@@ -24,6 +24,7 @@ namespace SierraOS.Commands
             Console.Write("\necho          Echos something the user types");
             Console.Write("\ntime          Displays the current system time");
             Console.Write("\ndate          Displays the current system date");
+            Console.Write("\nbeep          Beeps");
             Console.Write("\ndiagnostics   Diagnostic menu");
             Console.Write("\nshutdown      Shuts down SierraOS");
             Console.Write("\nreboot        Reboots SierraOS");
