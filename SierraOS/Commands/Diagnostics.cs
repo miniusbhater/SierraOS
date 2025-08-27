@@ -43,35 +43,27 @@ namespace SierraOS.Commands
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
             Thread.Sleep(5000);
-
             Console.BackgroundColor = ConsoleColor.White;
             Console.Clear();
             Thread.Sleep(5000);
-
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.Clear();
             Thread.Sleep(5000);
-
             Console.BackgroundColor = ConsoleColor.Red;
             Console.Clear();
             Thread.Sleep(5000);
-
             Console.BackgroundColor = ConsoleColor.Green;
             Console.Clear();
             Thread.Sleep(5000);
-
             Console.BackgroundColor = ConsoleColor.Yellow;
             Console.Clear();
             Thread.Sleep(5000);
-
             Console.BackgroundColor = ConsoleColor.Cyan;
             Console.Clear();
             Thread.Sleep(5000);
-
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.Clear();
             Thread.Sleep(5000);
-
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
             Thread.Sleep(1000);
