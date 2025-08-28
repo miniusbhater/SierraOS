@@ -4,7 +4,7 @@ Take That Terry Davis
 ## list of commands
 
 help
-ver
+\nver
 clear
 list
 vfs
