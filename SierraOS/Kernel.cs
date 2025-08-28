@@ -18,7 +18,6 @@ namespace SierraOS
         protected override void BeforeRun()
         {
             Console.WriteLine("OK");
-            Console.Beep();
             Boot.CpuVendor.cpu();
             Boot.CpuBrand.brand();
             Boot.CpuUptime.SysUptime();
