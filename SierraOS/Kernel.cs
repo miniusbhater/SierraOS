@@ -16,12 +16,8 @@ namespace SierraOS
         private CommandManager _commandManager;
         protected override void BeforeRun()
         {
-            string availram;
-            string usedram;
-            availram = GCImplementation.GetAvailableRAM().ToString();
-            usedram = GCImplementation.GetUsedRAM().ToString();
-            Console.WriteLine($"{availram} system RAM free");
-            Console.WriteLine($"{usedram} system ram used");
+            Boot.RAM.RAMStuff();
+            Boot.BootTime.Time();
             this._commandManager = new CommandManager();          
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Magenta;

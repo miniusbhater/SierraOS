@@ -29,6 +29,7 @@ namespace SierraOS.Commands
             this.commands.Add(new Commands.list("list"));
             this.commands.Add(new Commands.open("open"));
             this.commands.Add(new Commands.Strobe("strobe"));
+            this.commands.Add(new Commands.Colour("colour"));
         }
 
         public string processInput(string input)

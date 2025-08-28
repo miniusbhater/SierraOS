@@ -21,6 +21,7 @@ namespace SierraOS.Commands
             Console.Write("\nhelp          Lists Commands");
             Console.Write("\nver           Displays the SierraOS version");
             Console.Write("\nclear         Clears the screen");
+            Console.Write("\ncolour        Change the background and foreground colours");
             Console.Write("\nlist          Lists all files in a directory");
             Console.Write("\nvfs           Sets up the Virtual File System");
             Console.Write("\nopen          Displays the contents of a text file");
