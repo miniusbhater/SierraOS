@@ -3,8 +3,8 @@ Take That Terry Davis
 
 ## list of commands
 
-help
-\nver
+help <br />
+ver
 clear
 list
 vfs
