@@ -9,6 +9,7 @@ using Sys = Cosmos.System;
 using Cosmos.HAL;
 
 
+
 namespace SierraOS
 {
     public class Kernel : Sys.Kernel
@@ -16,11 +17,16 @@ namespace SierraOS
         private CommandManager _commandManager;
         protected override void BeforeRun()
         {
+            Console.WriteLine("OK");
             Boot.CpuVendor.cpu();
+            Boot.CpuBrand.brand();
+            Boot.CpuUptime.SysUptime();
             Boot.RAM.RAMStuff();
             Boot.BootTime.Time();
-            this._commandManager = new CommandManager();          
-            Console.WriteLine();
+            Boot.BootDate.Date();
+            Console.WriteLine("0.05");
+            this._commandManager = new CommandManager();    
+            Console.WriteLine("VFS has not been initialized yet, please do this manually");
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("Welcome to SierraOS");
             Console.ForegroundColor = ConsoleColor.White;
@@ -29,8 +35,7 @@ namespace SierraOS
             Console.WriteLine("\r\n\r\n ____  _                      ___  ____  \r\n/ ___|(_) ___ _ __ _ __ __ _ / _ \\/ ___| \r\n\\___ \\| |/ _ \\ '__| '__/ _` | | | \\___ \\ \r\n ___) | |  __/ |  | | | (_| | |_| |___) |\r\n|____/|_|\\___|_|  |_|  \\__,_|\\___/|____/ \r\n\r\n");
             Console.Beep();
             Thread.Sleep(4000);            
-            Console.Clear();
-            
+            Console.Clear();                      
         }
 
         protected override void Run()

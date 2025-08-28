@@ -32,6 +32,7 @@ namespace SierraOS.Commands
             this.commands.Add(new Commands.Colour("colour"));
             this.commands.Add(new Commands.Uptime("uptime"));
             this.commands.Add(new Commands.Coinflip("coinflip"));
+            this.commands.Add(new Commands.Github("github"));
         }
 
         public string processInput(string input)
