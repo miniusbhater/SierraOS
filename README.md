@@ -15,5 +15,7 @@ date <br />
 beep <br />
 diagnostics <br />
 strobe <br />
+colour <br />
 shutdown <br />
 reboot <br />
+
