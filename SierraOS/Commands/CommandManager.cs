@@ -28,6 +28,7 @@ namespace SierraOS.Commands
             this.commands.Add(new Commands.SetupVFS("vfs"));
             this.commands.Add(new Commands.list("list"));
             this.commands.Add(new Commands.open("open"));
+            this.commands.Add(new Commands.Strobe("strobe"));
         }
 
         public string processInput(string input)
