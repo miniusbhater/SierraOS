@@ -4,16 +4,16 @@ Take That Terry Davis
 ## list of commands
 
 help <br />
-ver
-clear
-list
-vfs
-open
-echo
-time
-date
-beep
-diagnostics
-strobe
-shutdown
-reboot
+ver <br />
+clear <br />
+list <br />
+vfs <br />
+open <br />
+echo <br />
+time <br />
+date <br />
+beep <br />
+diagnostics <br />
+strobe <br />
+shutdown <br />
+reboot <br />
