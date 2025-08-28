@@ -30,6 +30,7 @@ namespace SierraOS.Commands
             this.commands.Add(new Commands.open("open"));
             this.commands.Add(new Commands.Strobe("strobe"));
             this.commands.Add(new Commands.Colour("colour"));
+            this.commands.Add(new Commands.Uptime("uptime"));
         }
 
         public string processInput(string input)

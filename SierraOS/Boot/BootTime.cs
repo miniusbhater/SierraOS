@@ -14,7 +14,7 @@ namespace SierraOS.Boot
             byte hours = RTC.Hour;
             byte minutes = RTC.Minute;
             byte seconds = RTC.Second;
-
+            
             Console.WriteLine($"Boot Time: {hours:D2}:{minutes:D2}:{seconds:D2}");
         }
     }

@@ -13,10 +13,15 @@ namespace SierraOS.Boot
         {
             string availram;
             string usedram;
+            string totalram;
             availram = GCImplementation.GetAvailableRAM().ToString();
             usedram = GCImplementation.GetUsedRAM().ToString();
+            totalram = CPU.GetAmountOfRAM().ToString();
+            Console.WriteLine($"{totalram} system RAM total");
             Console.WriteLine($"{availram} system RAM free");
             Console.WriteLine($"{usedram} system ram used");
+
+            
         }
     }
 }

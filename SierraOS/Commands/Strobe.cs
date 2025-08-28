@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+// do not document in help
 namespace SierraOS.Commands
 {
     public class Strobe : Command
