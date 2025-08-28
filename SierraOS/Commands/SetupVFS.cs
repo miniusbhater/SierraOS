@@ -21,13 +21,20 @@ namespace SierraOS.Commands
         public void VFS()
         {
             Console.WriteLine("Setting up VFS");
-            var vfs = new Cosmos.System.FileSystem.CosmosVFS();
-            VFSManager.RegisterVFS(vfs);
-            Console.WriteLine("VFS setup");
-            var free = vfs.GetAvailableFreeSpace(@"0:\");
-            var total = vfs.GetTotalSize(@"0:\");
-            Console.WriteLine($"Disk Size: {total / 1024 / 1024} MB");
-            Console.WriteLine($"Free Space: {free / 1024 / 1024} MB");
+            try
+            {
+                var vfs = new Cosmos.System.FileSystem.CosmosVFS();
+                VFSManager.RegisterVFS(vfs);
+                Console.WriteLine("VFS setup");
+                var free = vfs.GetAvailableFreeSpace(@"0:\");
+                var total = vfs.GetTotalSize(@"0:\");
+                Console.WriteLine($"Disk Size: {total / 1024 / 1024} MB");
+                Console.WriteLine($"Free Space: {free / 1024 / 1024} MB");
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine($"Error : {ex}");
+            }
         }
     }
 }
