@@ -11,5 +11,9 @@ namespace SierraOS.Applications
         string IApplication.Name { get; set; }
 
         string IApplication.Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public abstract void Initialize();
+
+        public abstract void Run();
     }
 }
