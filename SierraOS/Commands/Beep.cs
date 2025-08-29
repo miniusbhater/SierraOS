@@ -13,7 +13,7 @@ namespace SierraOS.Commands
         public override string execute(string[] args)
         {
             BeepBeep();
-            return "";
+            return "Beep!";
 
         }
 
