@@ -34,7 +34,7 @@ namespace SierraOS.Commands
             catch (Exception ex) 
             {
                 Console.WriteLine($"Error : {ex}");
-            }
+            }       
         }
     }
 }
