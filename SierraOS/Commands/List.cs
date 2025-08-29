@@ -39,7 +39,7 @@ namespace SierraOS.Commands
                 Console.WriteLine("Error: " + ex.Message);
             }
 
-            }
+        }
             
     }
 }
