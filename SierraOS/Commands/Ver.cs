@@ -13,7 +13,7 @@ namespace SierraOS.Commands
         public override string execute(string[] args)
         {
             VersionPrint();
-            return "Made by miniusbhater";
+            return "Made by miniusbhater and Adam1000";
 
         }
 
