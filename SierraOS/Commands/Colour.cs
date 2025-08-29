@@ -38,38 +38,38 @@ namespace SierraOS.Commands
             string input;
             Console.WriteLine("1. Black\n2. White\n3. Red\n4. Blue\n5. Green\n6. Yellow\n7. Magenta\n8. Cyan");
             input = Console.ReadLine();
-            if (input == "1")
+
+            switch (input)
             {
-                Console.BackgroundColor = ConsoleColor.Black;
+                case "1":
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    break;
+                case "2":
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+                case "3":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    break;
+                case "4":
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    break;
+                case "5":
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    break;
+                case "6":
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    break;
+                case "7":
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    break;
+                case "8":
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    break;
+                default:
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    break;
             }
-            if (input == "2")
-            {
-                Console.BackgroundColor = ConsoleColor.White;
-            }
-            if (input == "3")
-            {
-                Console.BackgroundColor = ConsoleColor.Red;
-            }
-            if (input == "4")
-            {
-                Console.BackgroundColor = ConsoleColor.Blue;
-            }
-            if (input == "5")
-            {
-                Console.BackgroundColor = ConsoleColor.Green;
-            }
-            if (input == "6")
-            {
-                Console.BackgroundColor = ConsoleColor.Yellow;
-            }
-            if (input == "7")
-            {
-                Console.BackgroundColor = ConsoleColor.Magenta;
-            }
-            if (input == "8")
-            {
-                Console.BackgroundColor = ConsoleColor.Cyan;
-            }
+
             ColourMenu();
         }
 
@@ -78,41 +78,39 @@ namespace SierraOS.Commands
             string input;
             Console.WriteLine("1. Black\n2. White\n3. Red\n4. Blue\n5. Green\n6. Yellow\n7. Magenta\n8. Cyan");
             input = Console.ReadLine();
-            if (input == "1")
+
+            switch(input)
             {
-                Console.ForegroundColor = ConsoleColor.Black;
+                case "1":
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    break;
+                case "2":
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+                case "3":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    break;
+                case "4":
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    break;
+                case "5":
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    break;
+                case "6":
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    break;
+                case "7":
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    break;
+                case "8":
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    break;
+                default:
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
             }
-            if (input == "2")
-            {
-                Console.ForegroundColor = ConsoleColor.White;
-            }
-            if (input == "3")
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-            }
-            if (input == "4")
-            {
-                Console.ForegroundColor = ConsoleColor.Blue;
-            }
-            if (input == "5")
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-            }
-            if (input == "6")
-            {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-            }
-            if (input == "7")
-            {
-                Console.ForegroundColor = ConsoleColor.Magenta;
-            }
-            if (input == "8")
-            {
-                Console.ForegroundColor = ConsoleColor.Cyan;
-            }
+
             ColourMenu();
         }
-       
-
     }
 }
