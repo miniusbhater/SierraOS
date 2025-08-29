@@ -32,7 +32,7 @@ namespace SierraOS.Commands
                 sound();
             }
         
-            }
+        }
 
         public void Display()
         {

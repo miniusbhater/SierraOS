@@ -12,16 +12,14 @@ namespace SierraOS.Commands
 
         public override string execute(string[] args)
         {
-            echo();
-            return "";
+            if(args.Length == 0)
+            {
+                return "Error: echo command requires an argument.";
+            }
 
-        }
+            string message = string.Join(" ", args);
 
-        public void echo()
-        {
-            Console.WriteLine("Input something to echo");
-            var input = Console.ReadLine();            
-            Console.WriteLine(input);
+            return message;
         }
     }
 }
