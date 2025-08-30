@@ -19,7 +19,7 @@
         <PxeInterface>192.168.0.8</PxeInterface>
         <RemoveBootDebugOutput>False</RemoveBootDebugOutput>
         <DebugEnabled>False</DebugEnabled>
-        <BinFormat>Bin</BinFormat>
+        <BinFormat>Elf</BinFormat>
     </PropertyGroup>
 
     <ItemGroup>
