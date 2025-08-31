@@ -12,15 +12,24 @@ namespace SierraOS.Boot
     {
         public static void chime()
         {
-            PCSpeaker.Beep(523, 200);
-            Thread.Sleep(50);
-            PCSpeaker.Beep(587, 200);
-            Thread.Sleep(50);
-            PCSpeaker.Beep(659, 200);
-            Thread.Sleep(50);
-            PCSpeaker.Beep(783, 300);
-            Thread.Sleep(50);
-            PCSpeaker.Beep(1046, 400);
+            ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+
+            if (keyInfo.Key == ConsoleKey.M)
+            {
+                Console.WriteLine("Startup sound skipped");
+            }           
+            else
+            {
+                PCSpeaker.Beep(523, 200);
+                Thread.Sleep(50);
+                PCSpeaker.Beep(587, 200);
+                Thread.Sleep(50);
+                PCSpeaker.Beep(659, 200);
+                Thread.Sleep(50);
+                PCSpeaker.Beep(783, 300);
+                Thread.Sleep(50);
+                PCSpeaker.Beep(1046, 400);
+            }          
         }
     }
 }

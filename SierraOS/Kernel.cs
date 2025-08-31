@@ -34,8 +34,9 @@ namespace SierraOS
             //Console.Clear();
             Console.WriteLine("\r\n\r\n ____  _                      ___  ____  \r\n/ ___|(_) ___ _ __ _ __ __ _ / _ \\/ ___| \r\n\\___ \\| |/ _ \\ '__| '__/ _` | | | \\___ \\ \r\n ___) | |  __/ |  | | | (_| | |_| |___) |\r\n|____/|_|\\___|_|  |_|  \\__,_|\\___/|____/ \r\n\r\n");
             Thread.Sleep(300);
+            Console.WriteLine("Press the enter key to continue."); // this solution is probably temporary... probably
             Boot.BootChime.chime();
-            Thread.Sleep(4000);         
+            Thread.Sleep(400);         
             Console.Clear();
            
         }
