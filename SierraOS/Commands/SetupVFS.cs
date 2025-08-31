@@ -19,7 +19,7 @@ namespace SierraOS.Commands
 
         }
 
-        public void Question()
+        public void Question() //i dont know why its in a seperate void i thought it would fix something which wasnt even an issue 
         {
             Console.WriteLine("If no FAT formatted drive is present then SierraOS will\nbecome unresponsive. Continue? (y/n)");
             string input = Console.ReadLine();
