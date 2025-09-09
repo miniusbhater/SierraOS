@@ -13,6 +13,8 @@ namespace SierraOS.Applications
 
         string Description { get; set; }
 
+        string Command { get; set; }
+
         //int Version { get; set; }
     }
 }
