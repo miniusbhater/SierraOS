@@ -24,7 +24,7 @@ namespace SierraOS
             Boot.RAM.RAMStuff();
             Boot.BootTime.Time();
             Boot.BootDate.Date();
-            Console.WriteLine("0.07");
+            Console.WriteLine("0.08");
             this._commandManager = new CommandManager();    
             Console.WriteLine("VFS has not been initialized yet, please do this manually");
             Console.ForegroundColor = ConsoleColor.Magenta;
