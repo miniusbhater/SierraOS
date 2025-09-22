@@ -34,6 +34,7 @@ namespace SierraOS.Commands
             this.commands.Add(new Commands.Coinflip("coinflip"));
             this.commands.Add(new Commands.Github("github"));
             this.commands.Add(new Commands.About("about"));
+            this.commands.Add(new Commands.Account("account"));
         }
 
         public string processInput(string input)
