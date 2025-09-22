@@ -29,6 +29,12 @@ namespace SierraOS.Commands
                 return "";
             }
 
+            if (args[0] == "remove")
+            {
+                UAccount.Remove.removeAccount();
+                return "";
+            }
+
 
             return $"Error: Unknown argument.\nUse 'account help' for a list of arguments.";
 

@@ -13,7 +13,6 @@ namespace SierraOS.UAccount
             Console.Write("\nhelp          Lists Account Arguments");
             Console.Write("\nnew           Create A New User Account");
             Console.Write("\nremove        Remove A User Account");
-            Console.Write("\ndetails       Lists User Account Details");
             Console.WriteLine();
             Console.WriteLine();
         }

@@ -44,12 +44,12 @@ namespace SierraOS.UAccount
             VFSManager.RegisterVFS(vfs);
             Console.WriteLine("VFS was successfully mounted");
             Console.WriteLine("Writing to username file");
-            string fileName = "username.txt";
+            string fileName = "0:\\username.txt";
             string content = username;
             File.WriteAllText(fileName, content);
             Console.WriteLine("Username file written to");
             Console.WriteLine("Writing to password file");
-            string fileName2 = "password.txt";
+            string fileName2 = "0:\\password.txt";
             string content2 = password;
             File.WriteAllText(fileName2, content2);
             Console.WriteLine("Password file was written to");
@@ -60,6 +60,11 @@ namespace SierraOS.UAccount
             Console.Clear();
             Thread.Sleep(500);
             Cosmos.System.Power.Reboot();
+
+
+
+
+           
         }
     }
 }
