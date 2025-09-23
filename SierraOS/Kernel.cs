@@ -41,6 +41,11 @@ namespace SierraOS
             {
                 UAccount.LogIn.login();
             }
+            if (keyInput.Key == ConsoleKey.M)
+            {
+                Thread.Sleep(400);
+                Console.Clear();
+            }
             else
             {
                 Boot.BootChime.chime();
