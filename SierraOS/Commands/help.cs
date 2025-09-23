@@ -22,6 +22,7 @@ namespace SierraOS.Commands
             Console.Write("\nabout         About SierraOS");
             Console.Write("\nver           Displays the SierraOS version");
             Console.Write("\nclear         Clears the screen");
+            Console.Write("\naccount       'account help'");
             Console.Write("\ncolour        Change the background and foreground colours");
             Console.Write("\nlist          Lists all files in a directory");
             Console.Write("\nvfs           Sets up the Virtual File System");
@@ -34,6 +35,9 @@ namespace SierraOS.Commands
             Console.Write("\ndiagnostics   Diagnostic menu");
             Console.Write("\nshutdown      Shuts down SierraOS");
             Console.Write("\nreboot        Reboots SierraOS");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("\nFor more commands run 'commands'");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine();
 
         }

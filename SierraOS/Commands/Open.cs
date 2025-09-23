@@ -13,28 +13,32 @@ namespace SierraOS.Commands
 
         public override string execute(string[] args)
         {
-            openfile();
+            if (args.Length == 0)
+            {
+                return "Error: open requires an argument.";
+            }
+
+            else
+            {
+                try
+                {
+                    string content = File.ReadAllText(args[0]);
+                    Console.WriteLine("\n");
+                    Console.WriteLine(content);
+                }
+                catch (Exception exeption)
+                {
+                    Console.WriteLine("Error: " + exeption.Message);
+                }
+            }
+
+              
+
             return "";
 
         }
 
-        public void openfile()
-        {
-            Console.WriteLine("Enter a file name to open");
-            string path = Console.ReadLine();
-
-            try
-            {
-                string content = File.ReadAllText(path);
-                Console.WriteLine("\n");
-                Console.WriteLine(content);
-            }
-            catch (Exception exeption)
-            {
-                Console.WriteLine("Error: " + exeption.Message);
-            }
-
-        }
+      
         
     }
 }
