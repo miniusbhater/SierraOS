@@ -31,6 +31,8 @@ namespace SierraOS.UAccount
             {
                 File.Delete("0:\\username.txt");
                 File.Delete("0:\\password.txt");
+                File.Delete("0:\\backcolour.txt");
+                File.Delete("0:\\frontcolour.txt");
                 Console.WriteLine("Account removed.");
                 Thread.Sleep(500);
                 Console.ForegroundColor = ConsoleColor.White;

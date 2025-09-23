@@ -13,6 +13,8 @@ namespace SierraOS.UAccount
     {
         public static void login()
         {
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("VFS will be mounted");
             Console.ForegroundColor= ConsoleColor.White;
@@ -30,6 +32,7 @@ namespace SierraOS.UAccount
                 if (passwordInput == contentPass)
                 {
                     Console.WriteLine("Press any key");
+                    Console.BackgroundColor = ConsoleColor.Black;
                     Boot.BootChime.chime();
                     Thread.Sleep(400);
                     Console.Clear();
