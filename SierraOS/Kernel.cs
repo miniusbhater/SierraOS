@@ -14,6 +14,13 @@ namespace SierraOS
 {
     public class Kernel : Sys.Kernel
     {
+        public enum Status
+        {
+            OK,
+            WARNING,
+            ERROR
+        };
+
         private CommandManager _commandManager;
         protected override void BeforeRun()
         {
