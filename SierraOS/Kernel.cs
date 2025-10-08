@@ -14,6 +14,26 @@ namespace SierraOS
 {
     public class Kernel : Sys.Kernel
     {
+        public enum Status
+        {
+            OK,
+            WARNING,
+            ERROR
+        };
+
+        // message function and fs initialization remake code originally by github user "CodeCs1" in their repo "TerminalOs-v1-C-
+        public static void Message(string text, Status status)
+        {
+            string status_text;
+            string empty = string.Empty;
+            status_text = empty;
+            if (status == Status.OK) status_text = "OK";
+            if (status == Status.ERROR) status_text = "ERROR";
+            if (status == Status.WARNING) status_text = "WARNING";
+
+            Console.WriteLine("[" + status_text + "] " + text);
+        }
+
         private CommandManager _commandManager;
         protected override void BeforeRun()
         {
