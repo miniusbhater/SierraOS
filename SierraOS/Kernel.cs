@@ -1,19 +1,21 @@
 ﻿using Cosmos.Core;
 using Cosmos.Core.Memory;
+using Cosmos.HAL;
+using Cosmos.System.Graphics;
 using SierraOS.Commands;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 using System.Threading;
 using Sys = Cosmos.System;
-using Cosmos.HAL;
 
 
 
 namespace SierraOS
 {
     public class Kernel : Sys.Kernel
-    {
+    {      
         public enum Status
         {
             OK,
