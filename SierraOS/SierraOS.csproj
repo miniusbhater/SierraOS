@@ -23,6 +23,7 @@
         <UseUEFI>False</UseUEFI>
         <CompileVBEMultiboot>False</CompileVBEMultiboot>
         <VBEResolution>800x600x32</VBEResolution>
+        <OptimizationLevel>1</OptimizationLevel>
     </PropertyGroup>
 
     <ItemGroup>
