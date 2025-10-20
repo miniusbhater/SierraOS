@@ -36,7 +36,7 @@ namespace SierraOS.Commands
             this.commands.Add(new Commands.About("about"));
             this.commands.Add(new Commands.Account("account"));
             this.commands.Add(new Commands.Commandss("commands"));
-           
+            this.commands.Add(new Commands.Gui("gui"));
         }
 
         public string processInput(string input)

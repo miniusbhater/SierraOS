@@ -20,12 +20,20 @@
         <RemoveBootDebugOutput>False</RemoveBootDebugOutput>
         <DebugEnabled>False</DebugEnabled>
         <BinFormat>Elf</BinFormat>
+        <UseUEFI>False</UseUEFI>
+        <CompileVBEMultiboot>False</CompileVBEMultiboot>
+        <VBEResolution>800x600x32</VBEResolution>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Cosmos.Build" Version="0-*" NoWarn="NU1604" />
         <PackageReference Include="Cosmos.Debug.Kernel" Version="0-*" NoWarn="NU1604" />
         <PackageReference Include="Cosmos.System2" Version="0-*" NoWarn="NU1604" />
+        <PackageReference Include="System.Drawing.Common" Version="9.0.10" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Misc\" />
     </ItemGroup>
 
 </Project>

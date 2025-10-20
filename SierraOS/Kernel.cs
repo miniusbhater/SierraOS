@@ -15,7 +15,8 @@ using Sys = Cosmos.System;
 namespace SierraOS
 {
     public class Kernel : Sys.Kernel
-    {      
+    {
+        
         public enum Status
         {
             OK,
@@ -39,6 +40,7 @@ namespace SierraOS
         private CommandManager _commandManager;
         protected override void BeforeRun()
         {
+                                
             Console.WriteLine("OK");
             Boot.CpuVendor.cpu();
             Boot.CpuBrand.brand();
