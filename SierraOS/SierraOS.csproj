@@ -13,7 +13,7 @@
         <StartCosmosGDB>False</StartCosmosGDB>
         <VisualStudioDebugPort>Pipe: Cosmos\Serial</VisualStudioDebugPort>
         <CosmosDebugPort>Serial: COM1</CosmosDebugPort>
-        <Launch>VMware</Launch>
+        <Launch>ISO</Launch>
         <Profile>VMware</Profile>
         <Description>Use VMware Player or Workstation to deploy and debug.</Description>
         <PxeInterface>192.168.0.8</PxeInterface>
@@ -22,7 +22,7 @@
         <BinFormat>Elf</BinFormat>
         <UseUEFI>False</UseUEFI>
         <CompileVBEMultiboot>False</CompileVBEMultiboot>
-        <VBEResolution>800x600x32</VBEResolution>
+        <VBEResolution>1920x1080x32</VBEResolution>
         <OptimizationLevel>1</OptimizationLevel>
     </PropertyGroup>
 
@@ -34,6 +34,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Gui\" />
       <Folder Include="Misc\" />
     </ItemGroup>
 

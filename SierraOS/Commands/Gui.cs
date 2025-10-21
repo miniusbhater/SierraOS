@@ -10,8 +10,8 @@ namespace SierraOS.Commands
     public class Gui : Command
     {
         Canvas canvas;
-        private int screenWidth = 480;
-        private int screenHeight = 360;
+        private int screenWidth = 640;
+        private int screenHeight = 480;
         private bool running = true;
 
         public Gui(string name) : base(name) { }
@@ -57,7 +57,17 @@ namespace SierraOS.Commands
 
         private void RunGUI()
         {
-            canvas = FullScreenCanvas.GetFullScreenCanvas(new Mode(screenWidth, screenHeight, ColorDepth.ColorDepth32));
+            System.Console.WriteLine($"Starting GUI in {screenWidth}x{screenHeight}");
+            try
+            {
+                canvas = FullScreenCanvas.GetFullScreenCanvas(new Mode(screenWidth, screenHeight, ColorDepth.ColorDepth24));
+            }
+            catch (Exception ex)
+            {
+                System.Console.ForegroundColor = ConsoleColor.Red;
+                System.Console.WriteLine($"\nFailed to set mode {screenWidth}x{screenHeight}: {ex.Message}");
+                System.Console.ResetColor();
+            }
             MouseManager.ScreenWidth = (uint)screenWidth;
             MouseManager.ScreenHeight = (uint)screenHeight;
             MouseManager.X = (uint)(screenWidth / 2);
@@ -66,7 +76,6 @@ namespace SierraOS.Commands
             while (running)
             {
                 canvas.Clear(Color.Blue);
-
                 int mouseX = (int)MouseManager.X;
                 int mouseY = (int)MouseManager.Y;
                 DrawCursor(mouseX, mouseY);canvas.DrawString($"X: {mouseX} Y: {mouseY}",PCScreenFont.Default,new Cosmos.System.Graphics.Pen(Color.Yellow),10, 10);

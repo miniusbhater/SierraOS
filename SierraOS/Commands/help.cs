@@ -19,6 +19,7 @@ namespace SierraOS.Commands
         public static void helpStuff()
         {
             Console.Write("\nhelp          Lists Commands");
+            Console.Write("\ngui           Start the SierraOS GUI");
             Console.Write("\nabout         About SierraOS");
             Console.Write("\nver           Displays the SierraOS version");
             Console.Write("\nclear         Clears the screen");
