@@ -1,9 +1,10 @@
-﻿using System;
-using System.Drawing;
-using System.Threading;
+﻿using Cosmos.Core;
 using Cosmos.System;
 using Cosmos.System.Graphics;
 using Cosmos.System.Graphics.Fonts;
+using System;
+using System.Drawing;
+using System.Threading;
 
 namespace SierraOS.Commands
 {
@@ -75,10 +76,25 @@ namespace SierraOS.Commands
             running = true;
             while (running)
             {
+                if (KeyboardManager.ControlPressed && KeyboardManager.AltPressed && KeyboardManager.ShiftPressed)
+                {
+                    PCSpeaker.Beep();                   
+                    canvas.Disable();
+                    System.Console.Clear();
+                    System.Console.WriteLine("SierraOS Rebooting...");
+                    Cosmos.System.Power.Reboot();
+                } 
                 canvas.Clear(Color.Blue);
                 int mouseX = (int)MouseManager.X;
                 int mouseY = (int)MouseManager.Y;
-                DrawCursor(mouseX, mouseY);canvas.DrawString($"X: {mouseX} Y: {mouseY}",PCScreenFont.Default,new Cosmos.System.Graphics.Pen(Color.Yellow),10, 10);
+                DrawCursor(mouseX, mouseY);
+                canvas.DrawString($"X: {mouseX} Y: {mouseY}",PCScreenFont.Default,new Cosmos.System.Graphics.Pen(Color.White),10, 30);
+                canvas.DrawString($"SierraOS 0.10", PCScreenFont.Default, new Cosmos.System.Graphics.Pen(Color.White), 10, 10);
+                string availram = GCImplementation.GetAvailableRAM().ToString();
+                string totalram = CPU.GetAmountOfRAM().ToString();
+                canvas.DrawString($"Total RAM: {totalram}MB", PCScreenFont.Default, new Cosmos.System.Graphics.Pen(Color.White), 10, 50);
+                canvas.DrawString($"Avail RAM: {availram}MB", PCScreenFont.Default, new Cosmos.System.Graphics.Pen(Color.White), 10, 70);
+                canvas.DrawString($"Ctrl + alt + shift to reboot", PCScreenFont.Default, new Cosmos.System.Graphics.Pen(Color.White), 10, 90);
                 canvas.Display();
                 Thread.Sleep(10);
             }

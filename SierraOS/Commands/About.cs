@@ -20,7 +20,7 @@ namespace SierraOS.Commands
         public void AboutPrint()
         {
             Console.WriteLine("\r\n\r\n ____  _                      ___  ____  \r\n/ ___|(_) ___ _ __ _ __ __ _ / _ \\/ ___| \r\n\\___ \\| |/ _ \\ '__| '__/ _` | | | \\___ \\ \r\n ___) | |  __/ |  | | | (_| | |_| |___) |\r\n|____/|_|\\___|_|  |_|  \\__,_|\\___/|____/ \r\n\r\n");
-            Console.WriteLine("0.09");
+            Console.WriteLine("0.10");
             Console.WriteLine("Made by miniusbhater and Adam1000");
         }
     }

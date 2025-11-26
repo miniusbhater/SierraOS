@@ -19,7 +19,7 @@ namespace SierraOS.Commands
 
         public void VersionPrint()
         {
-            Console.WriteLine("SierraOS 0.09");
+            Console.WriteLine("SierraOS 0.10");
         }
     }
 }
