@@ -60,7 +60,7 @@ namespace SierraOS.Commands
             System.Console.WriteLine($"Starting GUI in {screenWidth}x{screenHeight}");
             try
             {
-                canvas = FullScreenCanvas.GetFullScreenCanvas(new Mode(screenWidth, screenHeight, ColorDepth.ColorDepth24));
+                canvas = FullScreenCanvas.GetFullScreenCanvas(new Mode(screenWidth, screenHeight, ColorDepth.ColorDepth32));
             }
             catch (Exception ex)
             {
