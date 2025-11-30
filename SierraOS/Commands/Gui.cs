@@ -89,7 +89,7 @@ namespace SierraOS.Commands
                 int mouseY = (int)MouseManager.Y;
                 DrawCursor(mouseX, mouseY);
                 canvas.DrawString($"X: {mouseX} Y: {mouseY}",PCScreenFont.Default,new Cosmos.System.Graphics.Pen(Color.White),10, 30);
-                canvas.DrawString($"SierraOS 0.10", PCScreenFont.Default, new Cosmos.System.Graphics.Pen(Color.White), 10, 10);
+                canvas.DrawString($"SierraOS 0.11", PCScreenFont.Default, new Cosmos.System.Graphics.Pen(Color.White), 10, 10);
                 string availram = GCImplementation.GetAvailableRAM().ToString();
                 string totalram = CPU.GetAmountOfRAM().ToString();
                 canvas.DrawString($"Total RAM: {totalram}MB", PCScreenFont.Default, new Cosmos.System.Graphics.Pen(Color.White), 10, 50);

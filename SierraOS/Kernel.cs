@@ -6,6 +6,7 @@ using SierraOS.Commands;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading;
 using Sys = Cosmos.System;
@@ -16,7 +17,8 @@ namespace SierraOS
 {
     public class Kernel : Sys.Kernel
     {
-        
+
+
         public enum Status
         {
             OK,
@@ -48,7 +50,7 @@ namespace SierraOS
             Boot.RAM.RAMStuff();
             Boot.BootTime.Time();
             Boot.BootDate.Date();
-            Console.WriteLine("0.10");
+            Console.WriteLine("0.11");
             this._commandManager = new CommandManager();    
             Console.WriteLine("VFS has not been initialized yet, please do this manually");
             Console.ForegroundColor = ConsoleColor.Magenta;

@@ -11,6 +11,7 @@ namespace SierraOS.UAccount
 {
     public class LogIn
     {
+        public static bool isLoggedIn = false;
         public static void login()
         {
             Console.BackgroundColor = ConsoleColor.Blue;
@@ -32,6 +33,7 @@ namespace SierraOS.UAccount
                 if (passwordInput == contentPass)
                 {
                     Console.WriteLine("Press any key");
+                    isLoggedIn = true;
                     Console.BackgroundColor = ConsoleColor.Black;
                     Boot.BootChime.chime();
                     Thread.Sleep(400);
@@ -50,6 +52,22 @@ namespace SierraOS.UAccount
                 login();
             }
         }
+
+
+        public static void canStartVFS()
+        {
+            if (isLoggedIn ==  true)
+            {
+                Commands.SetupVFS.VFS();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("You are not logged in, please log in to start VFS.");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+        }
+
         
     }
 }

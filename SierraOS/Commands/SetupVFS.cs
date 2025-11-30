@@ -12,7 +12,7 @@ namespace SierraOS.Commands
 {
     public class SetupVFS : Command
     {
-        Sys.FileSystem.CosmosVFS fs = new Sys.FileSystem.CosmosVFS();
+       static Sys.FileSystem.CosmosVFS fs = new Sys.FileSystem.CosmosVFS();
 
         public static long collectingDriveSpace;
         public static string collectingSystemFile;
@@ -27,13 +27,13 @@ namespace SierraOS.Commands
 
         }
 
-        public void Question() //i dont know why its in a seperate void i thought it would fix something which wasnt even an issue 
+        public static void Question() //i dont know why its in a seperate void i thought it would fix something which wasnt even an issue 
         {
             Console.WriteLine("If no FAT formatted drive is present then SierraOS will\nbecome unresponsive. Continue? (y/n)");
             string input = Console.ReadLine();
             if (input == "y")
             {
-                VFS();
+                UAccount.LogIn.canStartVFS();
             }
             else
             {
@@ -41,7 +41,7 @@ namespace SierraOS.Commands
             }
         }
 
-        public void VFS()
+        public static void VFS()
         {
             Console.WriteLine("Setting up VFS");
             try
